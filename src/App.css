@@ -1,1 +1,6 @@
-
+.navbar ul li{
+  margin-left: 5rem !important;
+}
+.navbar .navbar-brand{
+  margin-left: 3rem !important;
+}
