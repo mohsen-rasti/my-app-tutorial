@@ -8,3 +8,12 @@
 .main-footer a{
   text-decoration: none !important; 
 }
+
+:root{
+  --mainDark:#343a40;
+  --mainGray:rgba(109,109,109);
+  --mainLightGray:rgba(172,172,172);
+  --mainWhite:#fff;
+  --mainBlue:#007bff;
+
+}
