@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route } from 'react-router';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Route } from "react-router";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-import {BrowserRouter as Router } from 'react-router-dom';
-
+import { BrowserRouter as Router } from "react-router-dom";
+import { InfoProvider } from "./Component/contex";
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById('root')
+  <InfoProvider>
+    <Router>
+      <App />
+    </Router>
+  </InfoProvider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
