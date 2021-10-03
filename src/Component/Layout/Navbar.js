@@ -10,18 +10,20 @@ function Navbar() {
   <div class="container-fluid">
     <Link class="navbar-brand " href="#"><img src={logo} style={{width:'35px'}}></img></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span>
+        <i className="fas fa-bars" style={{color:'#fff'}}></i>
+      </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
             <Link class="nav-link text-white text-uppercase active" aria-current="page" to="/">خانه&nbsp;<i class="fas fa-home"></i></Link>
-            </li>home
-            <li class="nav-item">
-            <Link class="nav-link text-white text-uppercase ml-6 active" aria-current="page" to="/news">اخبار&nbsp;<i class="fas fa-newspaper"></i></Link>
             </li>
             <li class="nav-item">
-            <Link class="nav-link text-white text-uppercase active" aria-current="page" to="/contacts">ارتباط با ما&nbsp;<i class="fas fa-id-card"></i></Link>
+            <Link class="nav-link text-white text-uppercase ml-6 active" aria-current="page" to="/news">اخبار</Link>
+            </li>
+            <li class="nav-item">
+            <Link class="nav-link text-white text-uppercase active" aria-current="page" to="/contacts">ارتباط با ما</Link>
             </li>
        </ul>
       <form class="d-flex">
