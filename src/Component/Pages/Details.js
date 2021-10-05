@@ -1,8 +1,9 @@
-import React from "react";
+import React,{Component} from "react";
 import { InfoConsumer } from "../contex";
 import styled from "styled-components";
 
-function Details() {
+class Details extends Component {
+  render(){
   return (
     <InfoConsumer>
       {(data) => {
@@ -15,10 +16,10 @@ function Details() {
           title,
           maps,
           description,
-        } = data.detailInfo;
+          } = data.detailInfo;
         return (
           <React.Fragment>
-            <HeaderDetails className="container-fluid align-items-center" >
+            <HeaderDetails className="conteiner-fluid align-items-center" >
               <h1 className="display-1 font-weight-bold">{headerTitle}</h1>
               <h4 className="display-5">{headerSubTitle}</h4>
               <p>{headerText}</p>
@@ -61,22 +62,40 @@ function Details() {
   <ul className="nav nav-tabs">
   
   {/* About Place Link */}   
-    <li className="nav item">
+    <li className="nav-item">
       <a href="#aboutPlace" className="nav-link active" role="tab" data-toggle="tab">About</a>
     </li>
 {/* Reviews Link */}   
-<li className="nav item">
+<li className="nav-item">
       <a href="#reviews" className="nav-link" role="tab" data-toggle="tab">Rewiews</a>
     </li>
 {/* Map Link */}   
-<li className="nav item">
-      <a href="#maps" className="nav-link" role="tab" data-toggle="tab">Maps</a>
+<li className="nav-item">
+      <a href="#maps" className="nav-link" role="tab" data-toggle="tab">Map</a>
     </li>
 
+<div className="tab-content mb-5">
+{/* Tab Pane */}
+<div id="aboutPlace" className="tab-pane in active text-center mt5" role="tabpanel">
+<h2 className="mb-3">{title}</h2>
+<p>{description}</p>
+<img src={img} alt={title} className="img-thumbnail img-fluid" />
+</div>
+{/* Reviews */}
+<div className="tab-pane" id="reviews" role="tabpanel">
+  Reviews Content
+</div>
+{/* map */}
+<div className="tab-pane" id="map" role="tabpanel">
+  <iframe src={maps} style={{border:'0',height:'28.125rem',width:'100%',frameboarder:'0'}} />
+</div>
+
+
+
+</div>
   </ul>
 
 </div>
-            
 
 
           </React.Fragment>
@@ -84,13 +103,13 @@ function Details() {
       }}
     </InfoConsumer>
   );
-}
+}}
 
 export default Details;
 
 const HeaderDetails = styled.header`
   background: linear-gradient(rgba(109, 109, 109), rgba(255, 255, 255));
-  height: 100%;
+  height: 70vh;
   text-transform: uppercase;
   color: var(--mainWhite);
   text-align: center;

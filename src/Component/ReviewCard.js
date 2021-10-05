@@ -1,0 +1,20 @@
+import React, { Component } from 'react'
+
+import { InfoConsumer } from './contex';
+
+
+ class ReviewCard extends Component {
+    render() {
+const{id,name,avatar,comment} = this.props.person;
+        return (
+    <InfoConsumer>
+        {data=>(
+<div className="media mt-5">
+    <img src={avatar} alt={name} style{{width:'40px',}} className="mr-3" />
+</div>        )}
+
+    </InfoConsumer   >
+        )
+    }
+}
+export default ReviewCard;
