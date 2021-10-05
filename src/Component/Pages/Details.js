@@ -1,6 +1,10 @@
 import React,{Component} from "react";
 import { InfoConsumer } from "../contex";
 import styled from "styled-components";
+import Reviews from "../Reviews";
+import ReviewCard from "../ReviewCard";
+import { reviews } from "../../data";
+
 
 class Details extends Component {
   render(){
@@ -83,10 +87,10 @@ class Details extends Component {
 </div>
 {/* Reviews */}
 <div className="tab-pane" id="reviews" role="tabpanel">
-  Reviews Content
-</div>
+                  {/* <Reviews/> */}
+                  </div>
 {/* map */}
-<div className="tab-pane" id="map" role="tabpanel">
+<div className="tab-pane" id="maps" role="tabpanel">
   <iframe src={maps} style={{border:'0',height:'28.125rem',width:'100%',frameboarder:'0'}} />
 </div>
 

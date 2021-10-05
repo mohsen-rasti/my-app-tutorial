@@ -1,9 +1,18 @@
 import React from 'react'
+import NewsCard from '../NewsCard';
+import { InfoConsumer } from '../contex';
+
 
 function News() {
     return (
         <div>
-            News Pages
+            <InfoConsumer>
+                {value => {
+                    return value.news.map(item => {
+                        return <NewsCard key={item.id} item={item} />;
+                    })
+                }}
+            </InfoConsumer>
         </div>
     )
 }
